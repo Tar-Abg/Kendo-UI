@@ -1,6 +1,35 @@
 $(document).ready(function() {
-    var dataSource = new kendo.data.DataSource()
-    $("#navBar").kendoMenu();
+  var a = [{title:"kkkk"}]
+    $("#navBar").kendoMenu({
+      dataSource: [{
+        text:"Model", 
+        items:[{text:"Bmw",
+                items:[{text:"BMW X1"},
+                        {text:"BMW 3 Series GT"},  
+                        {text:"BMW i8"},  
+                        {text:"BMW X4"}, 
+                        {text:"BMW X6",}, 
+              ]},
+                {text:"Mercedes-Benz",
+                items:[{text:"GLA 45 AMG"},
+                        {text:"AMG GT"},  
+                        {text:"GLE"},  
+                        {text:"GLE 2019"}, 
+                       ],                      
+                }], cssClass:"forFont"
+              },{
+        text:"German Cars", 
+        items:[{text:"Audi"},
+              {text:"Opel"},
+              {text:"Volkswagen"},
+              {text:"Ford-Werke GmbH"}],cssClass:"im"},{
+        text:"Contact",cssClass:"forFont", url:"#"       
+              },{
+        text:"About",cssClass:"forFont", url:"#grid"
+      }],
+    });
+
+
     var Car = [{model:"Bmw", price:"5000$",country:"Armenia", picture:"img/bmw.png", id:1},
                 {model:"Mercedes-Benz", price:"8000$",country:"Georgia", picture:"img/m.png", id:1},
                 {model:"Audi", price:"3500$",country:"Albania", picture:"img/audi.png", id:3},
